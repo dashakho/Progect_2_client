@@ -1,1 +1,70 @@
 @import '~bootstrap/scss/bootstrap';
+
+.success {
+  color: green;
+  font-size: 22px;
+}
+
+.failure {
+  color: red;
+}
+
+h1 {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 3em;
+  letter-spacing: 1.2rem;
+  padding: 4vh;
+  text-align: center;
+  color: purple;
+}
+
+h2 {
+  color: black;
+}
+
+body {
+  background-image: url("https://ae01.alicdn.com/kf/HTB1cyRAeQfb_uJkSmRyq6zWxVXaa/abstract-alternative-art-left-right-brains-splitting-selective-coloring-music-notes-YS09-Room-home-wall-modern.jpg");
+  // https://image.freepik.com/free-photo/human-brain-blue-background-hemisphere-is-responsible-logic_99433-37.jpg
+  background-repeat: no-repeat;
+  background-size: cover;
+  // background-position: center;
+  // background-size: 100% 100%;
+}
+
+.auth-show {
+  width: 300px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  margin: 8% auto 0;
+  text-align: center;
+}
+
+.auth-hide {
+  display: none;
+}
+
+.signUpButton {
+  position: center;
+}
+
+.input-box {
+  border-radius: 20px;
+  padding: 5px;
+  margin: 5px 0;
+  width: 100%;
+  border: 1px solid #999;
+  outline: none;
+}
+
+.button {
+  color: lightblue;
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  margin: 10px 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: lightblue;
+}

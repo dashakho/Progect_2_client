@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Memory Game</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,79 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <header>
+      <h1>Memory Game</h1>
+      </header>
+
+<h2 id="user_message"> </h2>
+
+    <div class="auth-show">  <h2>Sign-up</h2>
+    <form id="sign-up">
+    <input type="email" class="input-box" name="credentials[email]" placeholder='Enter email...' class='emailempty'>
+    <input type="password" class="input-box" name="credentials[password]" placeholder='Enter password' class='passwordempty'>
+    <input type="password" class="input-box" name="credentials[password_confirmation]" placeholder='Enter password again' class='passwordempty'>
+<br />
+    <button class="signUpButton">Sign up</button>
+    </form>
+    </div>
+
+    <div class="auth-show"> <h2>Sign-in</h2>
+    <form id='sign-in'>
+    <input type="email" class="input-box" name="credentials[email]" placeholder='Enter email...' class='emailempty'>
+    <input type="password" class="input-box" name="credentials[password]" placeholder='Enter password' class='passwordempty'>
+    <br />
+    <button>Sign in</button>
+    </form>
+    </div>
+
+    <div class="auth-hide"> <h2>Change Password</h2>
+    <form id='change-password'>
+    <input type="password" name="passwords[old]" placeholder='Enter old password' class='passwordempty'>
+    <input type="password" name="passwords[new]" placeholder='Enter new password' class='passwordempty'>
+    <br />
+    <button>Change Password</button>
+    </form>
+    </div>
+
+    <div class="auth-hide"><h2>Sign-Out</h2>
+    <form id='sign-out'>
+    <br />
+    <button>Sign Out</button>
+    </form>
+    </div>
+
+
+         <h2>Let's Create a New Fact</h2>
+        <!-- <div class="auth-hide"> <h2>Let's Create a New Fact</h2> -->
+        <form id="create_fact">
+        <input name="fact[category]" type="text" placeholder="put category">
+        <input name="fact[level]" type="text" placeholder="description">
+        <button>Create Fact</button>
+        <!-- <input type="submit" value="Create Fact"> -->
+        <!-- <button id="getFactsButton" class="btn-info mr-2 hide">Get All My Facts!</button> -->
+      </form>
+
+
+      <form id='show_fact'>
+        <input name="category" type="text" placeholder="put category">
+        <input name="level" type="text" placeholder="description">
+        <button>Show Facts</button>
+      </form>
+
+
+      <form id='update_fact'>
+        <input name="category" type="text" placeholder="put category">
+        <input name="level" type="text" placeholder="description">
+        <button>Update Fact</button>
+      </form>
+
+
+      <form id='destroy_fact'>
+        <input name="category" type="text" placeholder="put category">
+        <input name="level" type="text" placeholder="description">
+        <button>Delete Fact</button>
+      </form>
+
+
     </body>
 </html>
