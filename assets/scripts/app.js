@@ -11,8 +11,22 @@ $(() => {
   $('#sign-in').on('submit', events.onSignIn)
   $('#change-password').on('submit', events.onChangePassword)
   $('#sign-out').on('submit', events.onSignOut)
-  $('#create_fact').on('submit', events.onCreateFact)
-  $('#show_fact').on('submit', events.onShowFact)
-  $('#update_fact').on('submit', events.onUpdateFact)
-  $('#destroy_fact').on('submit', events.onDestroyFact)
+
+  $('#create-fact').on('submit', events.onCreateFact)
+  $('#get-facts').on('click', events.onGetFacts)
+  // $('#show-fact').on('submit', events.onShowFact)
+  // $('#update-fact').on('submit', events.onUpdateFact)
+  // $('#destroy-fact').on('submit', events.onDestroyFact)
+
+  events.addHandlers()
 })
+
+
+
+//   $('#getFactsButton').on('click', onGetFacts)
+//   $('#content').on('click', '.destroy_fact', onDestroyFact)
+//   $('#content').on('click', '.update_fact', function (event) {
+//     $(event.target).closest('section').find('.update-fact-form').show()
+//   })
+//   $('#content').on('submit', '.update-fact-form', onUpdateFact)
+// }

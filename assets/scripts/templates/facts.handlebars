@@ -1,0 +1,24 @@
+{{#each facts as |fact|}}
+
+<section data-id="{{fact.id}}">
+
+<!-- <h3>Fact id:{{fact.id}}<h3> -->
+<h3>Category: {{fact.category}}</h3>
+<h3>Level: {{fact.level}}</h3>
+
+<button class='btn btn-danger delete-fact' data-id="{{fact.id}}">Delete</button>
+<div class='update-fact'>
+<button class='btn btn-danger update-fact' data-id="{{fact.id}}">Update</button>
+
+<form class="hide update-fact-form">
+<h2>Make an update!</h2>
+<div class='update-fact'>Fact Id: {{fact.id}}</div>
+<input name='fact[category]' value="{{fact.category}}" type="text" placeholder="fact category">
+<input name="fact[level]" value="{{fact.level}}" type="text" placeholder="description">
+<input type="submit" value="Update Fact">
+</form>
+  </div>
+
+  </section>
+
+{{/each}}

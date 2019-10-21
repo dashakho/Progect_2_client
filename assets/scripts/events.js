@@ -1,9 +1,9 @@
 const getFormFields = require('../../lib/get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
-const store = require('./store')
+// const store = require('./store')
 
-const onSignUp = function(event) {
+const onSignUp = function (event) {
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
@@ -12,7 +12,7 @@ const onSignUp = function(event) {
     .catch(ui.onSignUpFailure)
 }
 
-const onSignIn = function(event) {
+const onSignIn = function (event) {
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
@@ -20,7 +20,7 @@ const onSignIn = function(event) {
     .then(ui.onSignInSuccess)
     .catch(ui.onSignInFailure)
 }
-const onChangePassword = function(event) {
+const onChangePassword = function (event) {
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
@@ -29,7 +29,7 @@ const onChangePassword = function(event) {
     .catch(ui.onChangePasswordFailure)
 }
 
-const onSignOut = function(event) {
+const onSignOut = function (event) {
   event.preventDefault()
   api.signOut()
     .then(ui.onSignOutSuccess)
@@ -40,25 +40,25 @@ const onCreateFact = event => {
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
-  console.log(formData)
+  // console.log(formData)
   api.createFact(formData)
     .then(ui.onCreateFactSuccess)
     .catch(ui.onCreateFactFailure)
 }
 
-const onGetFacts = function(event) {
+const onGetFacts = function (event) {
   event.preventDefault()
-  api.getActivities()
-    .then(ui.onGetFactssSuccess)
-    .catch(ui.onError)
+  api.getFacts()
+    .then(ui.onGetFactsSuccess)
+    .catch(ui.onGetFactsFailure)
 }
 
-const onUpdateFact = function(event) {
+const onUpdateFact = function (event) {
   const id = $(event.target).closest('section').data('id')
   event.preventDefault()
   const formData = getFormFields(event.target)
   api.updateFact(id, formData)
-    .then(function(responseData) {
+    .then(function (responseData) {
       onGetFacts(event)
     })
     .catch(ui.onError)
@@ -75,6 +75,15 @@ const onDeleteFact = (event) => {
     .catch(ui.failure)
 }
 
+const addHandlers = () => {
+  $('#getFactsButton').on('click', onGetFacts)
+  $('#content').on('click', '.delete-fact', onDeleteFact)
+  $('#content').on('click', '.update-fact', function (event) {
+    $(event.target).closest('section').find('.update-fact-form').show()
+  })
+  $('#content').on('submit', '.update-fact-form', onUpdateFact)
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
@@ -83,5 +92,6 @@ module.exports = {
   onCreateFact,
   onGetFacts,
   onUpdateFact,
-  onDeleteFact
+  onDeleteFact,
+  addHandlers
 }

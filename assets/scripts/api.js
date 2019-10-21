@@ -3,7 +3,7 @@
 const config = require('./config')
 const store = require('./store')
 
-const signUp = function(formData) {
+const signUp = function (formData) {
   return $.ajax({
     method: 'POST',
     url: config.apiUrl + '/sign-up',
@@ -11,7 +11,7 @@ const signUp = function(formData) {
   })
 }
 
-const signIn = function(formData) {
+const signIn = function (formData) {
   return $.ajax({
     method: 'POST',
     url: config.apiUrl + '/sign-in',
@@ -19,7 +19,7 @@ const signIn = function(formData) {
   })
 }
 
-const changePassword = function(formData) {
+const changePassword = function (formData) {
   return $.ajax({
     method: 'PATCH',
     url: config.apiUrl + '/change-password',
@@ -30,7 +30,7 @@ const changePassword = function(formData) {
   })
 }
 
-const signOut = function() {
+const signOut = function () {
   return $.ajax({
     method: 'DELETE',
     url: config.apiUrl + '/sign-out',
@@ -41,9 +41,10 @@ const signOut = function() {
 }
 
 const createFact = function (formData) {
+  console.log(formData)
   return $.ajax({
-    method: 'POST',
     url: config.apiUrl + '/facts',
+    method: 'POST',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
@@ -51,11 +52,10 @@ const createFact = function (formData) {
   })
 }
 
-const getFacts = function() {
+const getFacts = function () {
   return $.ajax({
     url: config.apiUrl + '/facts',
     method: 'GET',
-
     headers: {
       Authorization: 'Token token=' + store.user.token
     }
@@ -90,6 +90,47 @@ const deleteFact = (id) => {
     }
   })
 }
+
+//
+//  const getFacts = function () {
+//   return $.ajax({
+//     url: config.apiUrl + '/facts',
+//     method: 'GET',
+//
+//     headers: {
+//       Authorization: 'Token token=' + store.user.token
+//     }
+//   })
+// }
+//
+// const getFact = (id) => {
+//   return $.ajax({
+//     url: config.apiUrl + '/facts/' + id,
+//     method: 'GET'
+//   })
+// }
+//
+// const updateFact = (id, formData) => {
+//   // console.log(id)
+//   return $.ajax({
+//     url: config.apiUrl + `/facts/${id}`,
+//     method: 'PATCH',
+//     headers: {
+//       Authorization: 'Token token=' + store.user.token
+//     },
+//     data: formData
+//   })
+// }
+//
+// const deleteFact = (id) => {
+//   return $.ajax({
+//     url: config.apiUrl + '/facts/' + id,
+//     method: 'DELETE',
+//     headers: {
+//       Authorization: 'Token token=' + store.user.token
+//     }
+//   })
+// }
 
 module.exports = {
   signUp,

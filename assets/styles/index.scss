@@ -1,12 +1,13 @@
 @import '~bootstrap/scss/bootstrap';
 
 .success {
-  color: green;
+  text-align: center;
+  color: lightgreen;
   font-size: 22px;
 }
 
 .failure {
-  color: red;
+  color: orange;
 }
 
 h1 {
@@ -23,8 +24,11 @@ h2 {
 }
 
 body {
-  background-image: url("https://ae01.alicdn.com/kf/HTB1cyRAeQfb_uJkSmRyq6zWxVXaa/abstract-alternative-art-left-right-brains-splitting-selective-coloring-music-notes-YS09-Room-home-wall-modern.jpg");
-  // https://image.freepik.com/free-photo/human-brain-blue-background-hemisphere-is-responsible-logic_99433-37.jpg
+  background-image: url("https://ryanmartinproductions.com/image/298166-full_free-download-left-brain-right-brain-wallpaper-3134x2299-for-your.jpg");
+// https://martechtoday.com/wp-content/uploads/cld-assets/left-brain-right-brain-250945591-ss-1920_m3o7z0.jpg
+// https://image.freepik.com/free-photo/human-brain-blue-background-hemisphere-is-responsible-logic_99433-37.jpg
+// https://ae01.alicdn.com/kf/HTB1cyRAeQfb_uJkSmRyq6zWxVXaa/abstract-alternative-art-left-right-brains-splitting-selective-coloring-music-notes-YS09-Room-home-wall-modern.jpg
+
   background-repeat: no-repeat;
   background-size: cover;
   // background-position: center;
@@ -33,7 +37,7 @@ body {
 
 .auth-show {
   width: 300px;
-  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+  // box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
   padding: 20px;
   margin: 8% auto 0;
   text-align: center;
@@ -43,9 +47,9 @@ body {
   display: none;
 }
 
-.signUpButton {
-  position: center;
-}
+// .signUpButton {
+//   position: center;
+// }
 
 .input-box {
   border-radius: 20px;

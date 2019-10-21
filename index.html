@@ -11,10 +11,11 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
+
     <body>
-      <header>
-      <h1>Memory Game</h1>
-      </header>
+    <header>
+    <h1>Memory Game</h1>
+    </header>
 
 <h2 id="user_message"> </h2>
 
@@ -37,35 +38,52 @@
     </form>
     </div>
 
-    <div class="auth-hide"> <h2>Change Password</h2>
-    <form id='change-password'>
-    <input type="password" name="passwords[old]" placeholder='Enter old password' class='passwordempty'>
-    <input type="password" name="passwords[new]" placeholder='Enter new password' class='passwordempty'>
-    <br />
-    <button>Change Password</button>
-    </form>
-    </div>
 
-    <div class="auth-hide"><h2>Sign-Out</h2>
-    <form id='sign-out'>
-    <br />
-    <button>Sign Out</button>
-    </form>
-    </div>
-
-
-         <h2>Let's Create a New Fact</h2>
         <!-- <div class="auth-hide"> <h2>Let's Create a New Fact</h2> -->
-        <form id="create_fact">
-        <input name="fact[category]" type="text" placeholder="put category">
-        <input name="fact[level]" type="text" placeholder="description">
-        <button>Create Fact</button>
-        <!-- <input type="submit" value="Create Fact"> -->
-        <!-- <button id="getFactsButton" class="btn-info mr-2 hide">Get All My Facts!</button> -->
+  <form id="create-fact" class = "auth-hide">
+  <h2>Let's Create a New Fact</h2>
+  <input name="fact[category]" type="text" placeholder="put category" required>
+  <input name="fact[level]" type="text" placeholder="description" required>
+  <br>
+  <input type="submit" value="Create Fact!" class="btn btn-primary btn-rounded" required>
+  <br>
+  <br>
+
+  <div class= "nav-buttons">
+  <button id="getFactsButton" class="btn btn-info mr-2 hide">Get My Facts!</button>
+  </div>
+</form>
+
+
+<main>
+<div id="content" class="content"></div>
+</main>
+
+  <!-- <button>Create Fact</button> -->
+  <!-- <input type="submit" value="Create Fact"> -->
+  <!-- <button id="getFactsButton" class="btn-info mr-2 hide">Get All My Facts!</button> -->
+  <br>
+  <br>
+
+      <div class="auth-hide"> <h2></h2>
+      <form id='change-password'>
+      <input type="password" name="passwords[old]" placeholder='Enter old password' class='passwordempty'>
+      <input type="password" name="passwords[new]" placeholder='Enter new password' class='passwordempty'>
+      <br />
+      <button>Change Password</button>
       </form>
+      </div>
+
+      <div class="auth-hide">
+      <form id='sign-out'>
+      <br />
+      <button>Sign Out</button>
+      </form>
+      </div>
 
 
-      <form id='show_fact'>
+
+      <!-- <form id='show_fact'>
         <input name="category" type="text" placeholder="put category">
         <input name="level" type="text" placeholder="description">
         <button>Show Facts</button>
@@ -83,7 +101,7 @@
         <input name="category" type="text" placeholder="put category">
         <input name="level" type="text" placeholder="description">
         <button>Delete Fact</button>
-      </form>
+      </form> -->
 
 
     </body>
