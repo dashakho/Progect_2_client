@@ -56,6 +56,7 @@ const onGetFacts = function (event) {
 const onUpdateFact = function (event) {
   const id = $(event.target).closest('section').data('id')
   event.preventDefault()
+  console.log('Update target is', event.target)
   const formData = getFormFields(event.target)
   api.updateFact(id, formData)
     .then(function (responseData) {
@@ -69,9 +70,9 @@ const onDeleteFact = (event) => {
   event.preventDefault()
   api.deleteFact(id)
     .then(() => {
-      api.getActivities()
-        .then(ui.onDeleteFactSuccess)
+      onGetFacts(event)
     })
+    .then(ui.onDeleteFactSuccess)
     .catch(ui.failure)
 }
 

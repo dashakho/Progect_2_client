@@ -170,7 +170,7 @@ const onUpdateFactFailure = function (responseData) {
   $('#update-fact').trigger('reset')
 }
 
-const onDestroyFactSuccess = function (responseData) {
+const onDeleteFactSuccess = function (responseData) {
   successMessage('The fact deleted successfully!')
   setTimeout(function () {
     $('#user_message').text('')
@@ -179,7 +179,7 @@ const onDestroyFactSuccess = function (responseData) {
   $('#destroy-fact').trigger('reset')
 }
 
-const onDestroyFactFailure = function (responseData) {
+const onDeleteFactFailure = function (responseData) {
   failureMessage('Failed')
   setTimeout(function () {
     $('#user_message').text('')
@@ -203,7 +203,7 @@ module.exports = {
   onShowFactFailure,
   onUpdateFactSuccess,
   onUpdateFactFailure,
-  onDestroyFactSuccess,
-  onDestroyFactFailure,
+  onDeleteFactSuccess,
+  onDeleteFactFailure,
   onGetFactsSuccess
 }
