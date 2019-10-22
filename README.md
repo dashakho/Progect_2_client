@@ -1,5 +1,5 @@
-## GITHUB link to the back end: https://github.com/dashakho/project_2_api
-## DEPLOYED API: https://git.heroku.com/immense-crag-06158.git
+GITHUB link to the back end: https://github.com/dashakho/project_2_api
+DEPLOYED API: https://git.heroku.com/immense-crag-06158.git
 
 ## PURPOSE
 
