@@ -73,6 +73,7 @@ const onSignOutSuccess = function () {
     $('#user_message').text('')
   }, 3000)
   $('.auth-hide, .auth-show').toggleClass('auth-hide auth-show')
+  $('.content').hide()
 }
 
 const onSignOutFailure = function () {
@@ -122,8 +123,8 @@ const onGetFactsSuccess = responseData => {
   const showFactsHtml = showFactsTemplate({
     facts: responseData.facts
   })
-
-  $('.content').html(showFactsHtml)
+  $('.content').show().html(showFactsHtml)
+  // $('.content').html(showFactsHtml)
   $('#update-fact-form').removeClass('hide')
   setTimeout(() => {
     $('#create-fact-message').html('')
