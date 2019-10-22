@@ -2,8 +2,6 @@
 
 const store = require('./store')
 const showFactsTemplate = require('./templates/facts.handlebars')
-// const showHandlebars = require('./templates/facts.handlebars')
-// const selectFactTemplate = require('./templates/fact-showing.handlebars')
 
 const successMessage = function (newText) {
   $('#user_message').text(newText)
@@ -85,7 +83,6 @@ const onSignOutFailure = function () {
 
 // const onCreateFactSuccess = function (responseData) {
 //   store.responseData = responseData
-//   // console.log(store.game)
 //   // add success message to content
 //   $('#create-fact-message').html('Your fact has been created!')
 //   $('#create-fact-message').addClass('success')
@@ -119,7 +116,7 @@ const onCreateFactFailure = function (responseData) {
 
 const onGetFactsSuccess = responseData => {
   $('#create-fact-message').html('Success!')
-  console.log("in on get facts success", responseData.facts)
+  // console.log("in on get facts success", responseData.facts)
   const showFactsHtml = showFactsTemplate({
     facts: responseData.facts
   })

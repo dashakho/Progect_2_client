@@ -41,7 +41,7 @@ const signOut = function () {
 }
 
 const createFact = function (formData) {
-  console.log(formData)
+  // console.log(formData)
   return $.ajax({
     url: config.apiUrl + '/facts',
     method: 'POST',
@@ -111,7 +111,6 @@ const deleteFact = (id) => {
 // }
 //
 // const updateFact = (id, formData) => {
-//   // console.log(id)
 //   return $.ajax({
 //     url: config.apiUrl + `/facts/${id}`,
 //     method: 'PATCH',

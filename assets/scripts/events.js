@@ -56,7 +56,7 @@ const onGetFacts = function (event) {
 const onUpdateFact = function (event) {
   const id = $(event.target).closest('section').data('id')
   event.preventDefault()
-  console.log('Update target is', event.target)
+  // console.log('Update target is', event.target)
   const formData = getFormFields(event.target)
   api.updateFact(id, formData)
     .then(function (responseData) {
