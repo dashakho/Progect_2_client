@@ -19,14 +19,14 @@ The app allows users, when signed up and signed in with their credentials, to cr
 
 ## USER STORY
 
-As a user, I want to be able to sign up.
-As a user, I want to be able to sign in with my credentials.
-As a user, I want to access all my facts when I am signed in.
-As a user, I want to be able to create new facts when signed in.
-As a user, I want to be able to update my facts when signed in.
-As a user, I want to be able to delete my facts when signed in.
-As a user, I want to be able to change my password.
-As a user, I want to be able to sign out.
+- As a user, I want to be able to sign up.
+- As a user, I want to be able to sign in with my credentials.
+- As a user, I want to access all my facts when I am signed in.
+- As a user, I want to be able to create new facts when signed in.
+- As a user, I want to be able to update my facts when signed in.
+- As a user, I want to be able to delete my facts when signed in.
+- As a user, I want to be able to change my password.
+- As a user, I want to be able to sign out.
 
 ## DEVELOPMENT
 
