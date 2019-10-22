@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Memory Game</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+
+    <body>
+    <header>
+    <h1>Memory Game</h1>
+    </header>
+
+<h2 id="user_message"> </h2>
+
+    <div class="auth-show">  <h2>Sign-up</h2>
+    <form id="sign-up">
+    <input type="email" class="input-box" name="credentials[email]" placeholder='Enter email...' class='emailempty'>
+    <input type="password" class="input-box" name="credentials[password]" placeholder='Enter password' class='passwordempty'>
+    <input type="password" class="input-box" name="credentials[password_confirmation]" placeholder='Enter password again' class='passwordempty'>
+   <br />
+    <button class="signUpButton">Sign up</button>
+    </form>
+    </div>
+
+    <div class="auth-show"> <h2>Sign-in</h2>
+    <form id='sign-in'>
+    <input type="email" class="input-box" name="credentials[email]" placeholder='Enter email...' class='emailempty'>
+    <input type="password" class="input-box" name="credentials[password]" placeholder='Enter password' class='passwordempty'>
+    <br />
+    <button>Sign in</button>
+    </form>
+    </div>
+
+<form id="create-fact" class="auth-hide">
+<div class="card">
+<div class="card-header">Let's Create a New Fact</div>
+<div class="card-body">
+
+<h4 class="card-title">
+<input name="fact[category]" class="form-control" type="text" placeholder="put category" required>
+</h4>
+<p class="card-text">
+<input name="fact[level]" class="form-control" type="text" placeholder="description" required>
+</p>
+<br>
+<input type="submit" value="Create Fact!" class="btn btn-primary btn-rounded" required>
+</div>
+</div>
+<br>
+<br>
+  <div class= "nav-buttons">
+  <button id="getFactsButton" class="btn btn-info mr-2 hide">Get My Facts!</button>
+  </div>
+</form>
+
+
+<!-- <form id="create-fact" class="auth-hide">
+<h2>Let's Create a New Fact</h2>
+<input name="fact[category]" class="form-control" type="text" placeholder="put category" required>
+<input name="fact[level]" class="form-control" type="text" placeholder="description" required>
+<br>
+<input type="submit" value="Create Fact!" class="btn btn-primary btn-rounded" required>
+<br>
+<br>
+<div class= "nav-buttons">
+<button id="getFactsButton" class="btn btn-info mr-2 hide">Get My Facts!</button>
+</div>
+</form> -->
+
+
+<main>
+<div id="content" class="content row justify-content-center"></div>
+</main>
+
+
+<!-- <main>
+<div id="content" class="content"></div>
+</main> -->
+
+  <br>
+  <br>
+  <br>
+
+      <div class="auth-hide"> <h2></h2>
+      <form id='change-password'>
+      <input type="password" name="passwords[old]" placeholder='Enter old password' class='passwordempty'>
+      <input type="password" name="passwords[new]" placeholder='Enter new password' class='passwordempty'>
+      <!-- <br /> -->
+      <button class="btn btn-secondary"> Change Password</button>
+
+      </form>
+      <div class="auth-hide">
+      <form id='sign-out'>
+      <button type="button-signout" class="btn btn-danger">Sign Out</button>
+      </form>
+      </div>
+
+
+    </body>
+</html>
